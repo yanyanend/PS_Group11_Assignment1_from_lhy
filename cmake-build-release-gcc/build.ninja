@@ -40,6 +40,40 @@ include CMakeFiles/rules.ninja
 # Logical path to working directory; prefix for absolute paths.
 
 cmake_ninja_workdir = /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/
+# =============================================================================
+# Object build statements for EXECUTABLE target GTest
+
+
+#############################################
+# Order-only phony target for GTest
+
+build cmake_object_order_depends_target_GTest: phony || cmake_object_order_depends_target_gtest cmake_object_order_depends_target_gtest_main
+
+build CMakeFiles/GTest.dir/test.cpp.o: CXX_COMPILER__GTest_unscanned_Release /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/test.cpp || cmake_object_order_depends_target_GTest
+  DEP_FILE = CMakeFiles/GTest.dir/test.cpp.o.d
+  FLAGS = -O3 -DNDEBUG -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always
+  INCLUDES = -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googletest/include" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googletest"
+  OBJECT_DIR = CMakeFiles/GTest.dir
+  OBJECT_FILE_DIR = CMakeFiles/GTest.dir
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target GTest
+
+
+#############################################
+# Link the executable GTest
+
+build GTest GTest[1]_tests.cmake | ${cmake_ninja_workdir}GTest[1]_tests.cmake: CXX_EXECUTABLE_LINKER__GTest_Release CMakeFiles/GTest.dir/test.cpp.o | lib/libgtest_main.a lib/libgtest.a || lib/libgtest.a lib/libgtest_main.a
+  FLAGS = -O3 -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
+  LINK_LIBRARIES = lib/libgtest_main.a  lib/libgtest.a
+  OBJECT_DIR = CMakeFiles/GTest.dir
+  POST_BUILD = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -D TEST_TARGET=GTest -D "TEST_EXECUTABLE=/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/GTest" -D TEST_EXECUTOR= -D "TEST_WORKING_DIR=/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc" -D TEST_EXTRA_ARGS= -D "TEST_PROPERTIES=TEST_DISCOVERY_TIMEOUT;600" -D TEST_PREFIX= -D TEST_SUFFIX= -D TEST_FILTER= -D NO_PRETTY_TYPES=FALSE -D NO_PRETTY_VALUES=FALSE -D TEST_LIST=GTest_TESTS -D "CTEST_FILE=/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/GTest[1]_tests.cmake" -D TEST_DISCOVERY_TIMEOUT=5 -D TEST_XML_OUTPUT_DIR= -P /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/GoogleTestAddTests.cmake
+  PRE_LINK = :
+  RESTAT = 1
+  TARGET_FILE = GTest
+  TARGET_PDB = GTest.dbg
+
 
 #############################################
 # Utility command for test
@@ -122,317 +156,86 @@ build install/strip: phony CMakeFiles/install/strip.util
 # /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/CMakeLists.txt
 # =============================================================================
 
-# =============================================================================
-# Object build statements for EXECUTABLE target Src
-
-
-#############################################
-# Order-only phony target for Src
-
-build cmake_object_order_depends_target_Src: phony || src/CMakeFiles/Src.dir
-
-build src/CMakeFiles/Src.dir/gs.cpp.o: CXX_COMPILER__Src_unscanned_Release /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/src/gs.cpp || cmake_object_order_depends_target_Src
-  DEP_FILE = src/CMakeFiles/Src.dir/gs.cpp.o.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always
-  INCLUDES = -I"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/include" -I"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/src/../gtest/googletest/googletest/include"
-  OBJECT_DIR = src/CMakeFiles/Src.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/Src.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target Src
-
-
-#############################################
-# Link the executable src/Src
-
-build src/Src: CXX_EXECUTABLE_LINKER__Src_Release src/CMakeFiles/Src.dir/gs.cpp.o
-  FLAGS = -O3 -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
-  LINK_PATH = -L"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/src/../gtest/googletest/build/lib"
-  OBJECT_DIR = src/CMakeFiles/Src.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = src/Src
-  TARGET_PDB = Src.dbg
-
-# =============================================================================
-# Object build statements for EXECUTABLE target GTest
-
-
-#############################################
-# Order-only phony target for GTest
-
-build cmake_object_order_depends_target_GTest: phony || src/CMakeFiles/GTest.dir
-
-build src/CMakeFiles/GTest.dir/test2.cpp.o: CXX_COMPILER__GTest_unscanned_Release /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/src/test2.cpp || cmake_object_order_depends_target_GTest
-  DEP_FILE = src/CMakeFiles/GTest.dir/test2.cpp.o.d
-  FLAGS = -O3 -DNDEBUG -std=gnu++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always
-  INCLUDES = -I"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/include" -I"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/src/../gtest/googletest/googletest/include"
-  OBJECT_DIR = src/CMakeFiles/GTest.dir
-  OBJECT_FILE_DIR = src/CMakeFiles/GTest.dir
-
-
-# =============================================================================
-# Link build statements for EXECUTABLE target GTest
-
-
-#############################################
-# Link the executable src/GTest
-
-build src/GTest: CXX_EXECUTABLE_LINKER__GTest_Release src/CMakeFiles/GTest.dir/test2.cpp.o
-  FLAGS = -O3 -DNDEBUG -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
-  LINK_LIBRARIES = -Wl,-rpath,"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/src/../gtest/googletest/build/lib"  -lgtest  -lgtest_main
-  LINK_PATH = -L"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/src/../gtest/googletest/build/lib"
-  OBJECT_DIR = src/CMakeFiles/GTest.dir
-  POST_BUILD = :
-  PRE_LINK = :
-  TARGET_FILE = src/GTest
-  TARGET_PDB = GTest.dbg
-
 
 #############################################
 # Utility command for test
 
-build src/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/src" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest --force-new-ctest-process
+build _deps/googletest-build/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
 
-build src/test: phony src/CMakeFiles/test.util
+build _deps/googletest-build/test: phony _deps/googletest-build/CMakeFiles/test.util
 
 
 #############################################
 # Utility command for edit_cache
 
-build src/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/src" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+build _deps/googletest-build/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build src/edit_cache: phony src/CMakeFiles/edit_cache.util
+build _deps/googletest-build/edit_cache: phony _deps/googletest-build/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build src/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/src" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1" -B"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc"
+build _deps/googletest-build/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1" -B"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build src/rebuild_cache: phony src/CMakeFiles/rebuild_cache.util
+build _deps/googletest-build/rebuild_cache: phony _deps/googletest-build/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build src/list_install_components: phony
+build _deps/googletest-build/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build src/CMakeFiles/install.util: CUSTOM_COMMAND src/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/src" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+build _deps/googletest-build/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/all
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
 
-build src/install: phony src/CMakeFiles/install.util
+build _deps/googletest-build/install: phony _deps/googletest-build/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build src/CMakeFiles/install/local.util: CUSTOM_COMMAND src/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/src" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+build _deps/googletest-build/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/all
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build src/install/local: phony src/CMakeFiles/install/local.util
+build _deps/googletest-build/install/local: phony _deps/googletest-build/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build src/CMakeFiles/install/strip.util: CUSTOM_COMMAND src/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/src" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+build _deps/googletest-build/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/all
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build src/install/strip: phony src/CMakeFiles/install/strip.util
+build _deps/googletest-build/install/strip: phony _deps/googletest-build/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/CMakeLists.txt
-# =============================================================================
-
-
-#############################################
-# Utility command for test
-
-build gtest/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest --force-new-ctest-process
-  DESC = Running tests...
-  pool = console
-  restat = 1
-
-build gtest/test: phony gtest/CMakeFiles/test.util
-
-
-#############################################
-# Utility command for edit_cache
-
-build gtest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
-  restat = 1
-
-build gtest/edit_cache: phony gtest/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build gtest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1" -B"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc"
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build gtest/rebuild_cache: phony gtest/CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for list_install_components
-
-build gtest/list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build gtest/CMakeFiles/install.util: CUSTOM_COMMAND gtest/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build gtest/install: phony gtest/CMakeFiles/install.util
-
-
-#############################################
-# Utility command for install/local
-
-build gtest/CMakeFiles/install/local.util: CUSTOM_COMMAND gtest/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build gtest/install/local: phony gtest/CMakeFiles/install/local.util
-
-
-#############################################
-# Utility command for install/strip
-
-build gtest/CMakeFiles/install/strip.util: CUSTOM_COMMAND gtest/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-  DESC = Installing the project stripped...
-  pool = console
-  restat = 1
-
-build gtest/install/strip: phony gtest/CMakeFiles/install/strip.util
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/CMakeLists.txt
-# =============================================================================
-
-
-#############################################
-# Utility command for test
-
-build gtest/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest --force-new-ctest-process
-  DESC = Running tests...
-  pool = console
-  restat = 1
-
-build gtest/googletest/test: phony gtest/googletest/CMakeFiles/test.util
-
-
-#############################################
-# Utility command for edit_cache
-
-build gtest/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-  DESC = No interactive CMake dialog available...
-  restat = 1
-
-build gtest/googletest/edit_cache: phony gtest/googletest/CMakeFiles/edit_cache.util
-
-
-#############################################
-# Utility command for rebuild_cache
-
-build gtest/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1" -B"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc"
-  DESC = Running CMake to regenerate build system...
-  pool = console
-  restat = 1
-
-build gtest/googletest/rebuild_cache: phony gtest/googletest/CMakeFiles/rebuild_cache.util
-
-
-#############################################
-# Utility command for list_install_components
-
-build gtest/googletest/list_install_components: phony
-
-
-#############################################
-# Utility command for install
-
-build gtest/googletest/CMakeFiles/install.util: CUSTOM_COMMAND gtest/googletest/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
-  DESC = Install the project...
-  pool = console
-  restat = 1
-
-build gtest/googletest/install: phony gtest/googletest/CMakeFiles/install.util
-
-
-#############################################
-# Utility command for install/local
-
-build gtest/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND gtest/googletest/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-  DESC = Installing only the local directory...
-  pool = console
-  restat = 1
-
-build gtest/googletest/install/local: phony gtest/googletest/CMakeFiles/install/local.util
-
-
-#############################################
-# Utility command for install/strip
-
-build gtest/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND gtest/googletest/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-  DESC = Installing the project stripped...
-  pool = console
-  restat = 1
-
-build gtest/googletest/install/strip: phony gtest/googletest/CMakeFiles/install/strip.util
-
-# =============================================================================
-# Write statements declared in CMakeLists.txt:
-# /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/CMakeLists.txt
+# /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -444,12 +247,12 @@ build gtest/googletest/install/strip: phony gtest/googletest/CMakeFiles/install/
 
 build cmake_object_order_depends_target_gmock: phony || cmake_object_order_depends_target_gtest
 
-build gtest/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_unscanned_Release /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
-  DEP_FILE = gtest/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
-  FLAGS = -O3 -DNDEBUG -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -I"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock/include" -I"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/include" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googletest"
-  OBJECT_DIR = gtest/googletest/googlemock/CMakeFiles/gmock.dir
-  OBJECT_FILE_DIR = gtest/googletest/googlemock/CMakeFiles/gmock.dir/src
+build _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_COMPILER__gmock_unscanned_Release /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googlemock/src/gmock-all.cc || cmake_object_order_depends_target_gmock
+  DEP_FILE = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d
+  FLAGS = -O3 -DNDEBUG -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googlemock/include" -I"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googlemock" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googletest/include" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googletest"
+  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
+  OBJECT_FILE_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src
 
 
 # =============================================================================
@@ -459,10 +262,10 @@ build gtest/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o: CXX_C
 #############################################
 # Link the static library lib/libgmock.a
 
-build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Release gtest/googletest/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o || lib/libgtest.a
+build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Release _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o || lib/libgtest.a
   ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
   LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
-  OBJECT_DIR = gtest/googletest/googlemock/CMakeFiles/gmock.dir
+  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = lib/libgmock.a
@@ -477,12 +280,12 @@ build lib/libgmock.a: CXX_STATIC_LIBRARY_LINKER__gmock_Release gtest/googletest/
 
 build cmake_object_order_depends_target_gmock_main: phony || cmake_object_order_depends_target_gmock cmake_object_order_depends_target_gtest
 
-build gtest/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_unscanned_Release /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
-  DEP_FILE = gtest/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
-  FLAGS = -O3 -DNDEBUG -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock/include" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/include" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googletest"
-  OBJECT_DIR = gtest/googletest/googlemock/CMakeFiles/gmock_main.dir
-  OBJECT_FILE_DIR = gtest/googletest/googlemock/CMakeFiles/gmock_main.dir/src
+build _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o: CXX_COMPILER__gmock_main_unscanned_Release /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googlemock/src/gmock_main.cc || cmake_object_order_depends_target_gmock_main
+  DEP_FILE = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d
+  FLAGS = -O3 -DNDEBUG -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googlemock/include" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googlemock" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googletest/include" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googletest"
+  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
+  OBJECT_FILE_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src
 
 
 # =============================================================================
@@ -492,10 +295,10 @@ build gtest/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o:
 #############################################
 # Link the static library lib/libgmock_main.a
 
-build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Release gtest/googletest/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o || lib/libgmock.a lib/libgtest.a
+build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Release _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o || lib/libgmock.a lib/libgtest.a
   ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
   LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
-  OBJECT_DIR = gtest/googletest/googlemock/CMakeFiles/gmock_main.dir
+  OBJECT_DIR = _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = lib/libgmock_main.a
@@ -505,82 +308,82 @@ build lib/libgmock_main.a: CXX_STATIC_LIBRARY_LINKER__gmock_main_Release gtest/g
 #############################################
 # Utility command for test
 
-build gtest/googletest/googlemock/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googlemock" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest --force-new-ctest-process
+build _deps/googletest-build/googlemock/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googlemock" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
 
-build gtest/googletest/googlemock/test: phony gtest/googletest/googlemock/CMakeFiles/test.util
+build _deps/googletest-build/googlemock/test: phony _deps/googletest-build/googlemock/CMakeFiles/test.util
 
 
 #############################################
 # Utility command for edit_cache
 
-build gtest/googletest/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googlemock" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+build _deps/googletest-build/googlemock/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googlemock" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build gtest/googletest/googlemock/edit_cache: phony gtest/googletest/googlemock/CMakeFiles/edit_cache.util
+build _deps/googletest-build/googlemock/edit_cache: phony _deps/googletest-build/googlemock/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build gtest/googletest/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googlemock" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1" -B"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc"
+build _deps/googletest-build/googlemock/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googlemock" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1" -B"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build gtest/googletest/googlemock/rebuild_cache: phony gtest/googletest/googlemock/CMakeFiles/rebuild_cache.util
+build _deps/googletest-build/googlemock/rebuild_cache: phony _deps/googletest-build/googlemock/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build gtest/googletest/googlemock/list_install_components: phony
+build _deps/googletest-build/googlemock/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build gtest/googletest/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND gtest/googletest/googlemock/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googlemock" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+build _deps/googletest-build/googlemock/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googlemock" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
 
-build gtest/googletest/googlemock/install: phony gtest/googletest/googlemock/CMakeFiles/install.util
+build _deps/googletest-build/googlemock/install: phony _deps/googletest-build/googlemock/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build gtest/googletest/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND gtest/googletest/googlemock/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googlemock" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+build _deps/googletest-build/googlemock/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googlemock" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build gtest/googletest/googlemock/install/local: phony gtest/googletest/googlemock/CMakeFiles/install/local.util
+build _deps/googletest-build/googlemock/install/local: phony _deps/googletest-build/googlemock/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build gtest/googletest/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND gtest/googletest/googlemock/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googlemock" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+build _deps/googletest-build/googlemock/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/googlemock/all
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googlemock" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build gtest/googletest/googlemock/install/strip: phony gtest/googletest/googlemock/CMakeFiles/install/strip.util
+build _deps/googletest-build/googlemock/install/strip: phony _deps/googletest-build/googlemock/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock/CMakeLists.txt
+# /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googlemock/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -590,14 +393,14 @@ build gtest/googletest/googlemock/install/strip: phony gtest/googletest/googlemo
 #############################################
 # Order-only phony target for gtest
 
-build cmake_object_order_depends_target_gtest: phony || gtest/googletest/googletest/CMakeFiles/gtest.dir
+build cmake_object_order_depends_target_gtest: phony || _deps/googletest-build/googletest/CMakeFiles/gtest.dir
 
-build gtest/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_unscanned_Release /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
-  DEP_FILE = gtest/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
-  FLAGS = -O3 -DNDEBUG -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -I"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/include" -I"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googletest"
-  OBJECT_DIR = gtest/googletest/googletest/CMakeFiles/gtest.dir
-  OBJECT_FILE_DIR = gtest/googletest/googletest/CMakeFiles/gtest.dir/src
+build _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_COMPILER__gtest_unscanned_Release /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googletest/src/gtest-all.cc || cmake_object_order_depends_target_gtest
+  DEP_FILE = _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d
+  FLAGS = -O3 -DNDEBUG -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -I"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googletest/include" -I"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googletest"
+  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir
+  OBJECT_FILE_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src
 
 
 # =============================================================================
@@ -607,10 +410,10 @@ build gtest/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o: CXX_C
 #############################################
 # Link the static library lib/libgtest.a
 
-build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Release gtest/googletest/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
+build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Release _deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o
   ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
   LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
-  OBJECT_DIR = gtest/googletest/googletest/CMakeFiles/gtest.dir
+  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = lib/libgtest.a
@@ -625,12 +428,12 @@ build lib/libgtest.a: CXX_STATIC_LIBRARY_LINKER__gtest_Release gtest/googletest/
 
 build cmake_object_order_depends_target_gtest_main: phony || cmake_object_order_depends_target_gtest
 
-build gtest/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_unscanned_Release /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
-  DEP_FILE = gtest/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
-  FLAGS = -O3 -DNDEBUG -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always -Wall -Wshadow -Wundef -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
-  INCLUDES = -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/include" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/gtest/googletest/googletest"
-  OBJECT_DIR = gtest/googletest/googletest/CMakeFiles/gtest_main.dir
-  OBJECT_FILE_DIR = gtest/googletest/googletest/CMakeFiles/gtest_main.dir/src
+build _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o: CXX_COMPILER__gtest_main_unscanned_Release /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googletest/src/gtest_main.cc || cmake_object_order_depends_target_gtest_main
+  DEP_FILE = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d
+  FLAGS = -O3 -DNDEBUG -std=c++14 -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk -fdiagnostics-color=always -Wall -Wshadow -Wno-error=dangling-else -DGTEST_HAS_PTHREAD=1 -fexceptions -Wextra -Wno-unused-parameter -Wno-missing-field-initializers
+  INCLUDES = -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googletest/include" -isystem "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-src/googletest"
+  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
+  OBJECT_FILE_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src
 
 
 # =============================================================================
@@ -640,10 +443,10 @@ build gtest/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o:
 #############################################
 # Link the static library lib/libgtest_main.a
 
-build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Release gtest/googletest/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o || lib/libgtest.a
+build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Release _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o || lib/libgtest.a
   ARCH_FLAGS = -arch arm64 -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX14.0.sdk
   LANGUAGE_COMPILE_FLAGS = -O3 -DNDEBUG
-  OBJECT_DIR = gtest/googletest/googletest/CMakeFiles/gtest_main.dir
+  OBJECT_DIR = _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir
   POST_BUILD = :
   PRE_LINK = :
   TARGET_FILE = lib/libgtest_main.a
@@ -653,85 +456,81 @@ build lib/libgtest_main.a: CXX_STATIC_LIBRARY_LINKER__gtest_main_Release gtest/g
 #############################################
 # Utility command for test
 
-build gtest/googletest/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest --force-new-ctest-process
+build _deps/googletest-build/googletest/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/ctest --force-new-ctest-process
   DESC = Running tests...
   pool = console
   restat = 1
 
-build gtest/googletest/googletest/test: phony gtest/googletest/googletest/CMakeFiles/test.util
+build _deps/googletest-build/googletest/test: phony _deps/googletest-build/googletest/CMakeFiles/test.util
 
 
 #############################################
 # Utility command for edit_cache
 
-build gtest/googletest/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+build _deps/googletest-build/googletest/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
   DESC = No interactive CMake dialog available...
   restat = 1
 
-build gtest/googletest/googletest/edit_cache: phony gtest/googletest/googletest/CMakeFiles/edit_cache.util
+build _deps/googletest-build/googletest/edit_cache: phony _deps/googletest-build/googletest/CMakeFiles/edit_cache.util
 
 
 #############################################
 # Utility command for rebuild_cache
 
-build gtest/googletest/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1" -B"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc"
+build _deps/googletest-build/googletest/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1" -B"/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc"
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
 
-build gtest/googletest/googletest/rebuild_cache: phony gtest/googletest/googletest/CMakeFiles/rebuild_cache.util
+build _deps/googletest-build/googletest/rebuild_cache: phony _deps/googletest-build/googletest/CMakeFiles/rebuild_cache.util
 
 
 #############################################
 # Utility command for list_install_components
 
-build gtest/googletest/googletest/list_install_components: phony
+build _deps/googletest-build/googletest/list_install_components: phony
 
 
 #############################################
 # Utility command for install
 
-build gtest/googletest/googletest/CMakeFiles/install.util: CUSTOM_COMMAND gtest/googletest/googletest/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
+build _deps/googletest-build/googletest/CMakeFiles/install.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -P cmake_install.cmake
   DESC = Install the project...
   pool = console
   restat = 1
 
-build gtest/googletest/googletest/install: phony gtest/googletest/googletest/CMakeFiles/install.util
+build _deps/googletest-build/googletest/install: phony _deps/googletest-build/googletest/CMakeFiles/install.util
 
 
 #############################################
 # Utility command for install/local
 
-build gtest/googletest/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND gtest/googletest/googletest/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+build _deps/googletest-build/googletest/CMakeFiles/install/local.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
   DESC = Installing only the local directory...
   pool = console
   restat = 1
 
-build gtest/googletest/googletest/install/local: phony gtest/googletest/googletest/CMakeFiles/install/local.util
+build _deps/googletest-build/googletest/install/local: phony _deps/googletest-build/googletest/CMakeFiles/install/local.util
 
 
 #############################################
 # Utility command for install/strip
 
-build gtest/googletest/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND gtest/googletest/googletest/all
-  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+build _deps/googletest-build/googletest/CMakeFiles/install/strip.util: CUSTOM_COMMAND _deps/googletest-build/googletest/all
+  COMMAND = cd "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googletest" && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
   DESC = Installing the project stripped...
   pool = console
   restat = 1
 
-build gtest/googletest/googletest/install/strip: phony gtest/googletest/googletest/CMakeFiles/install/strip.util
+build _deps/googletest-build/googletest/install/strip: phony _deps/googletest-build/googletest/CMakeFiles/install/strip.util
 
 # =============================================================================
 # Target aliases.
-
-build GTest: phony src/GTest
-
-build Src: phony src/Src
 
 build gmock: phony lib/libgmock.a
 
@@ -757,42 +556,28 @@ build libgtest_main.a: phony lib/libgtest_main.a
 #############################################
 # Folder: /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc
 
-build all: phony src/all gtest/all
+build all: phony GTest _deps/googletest-build/all
 
 # =============================================================================
 
 #############################################
-# Folder: /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest
+# Folder: /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build
 
-build gtest/all: phony gtest/googletest/all
-
-# =============================================================================
-
-#############################################
-# Folder: /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest
-
-build gtest/googletest/all: phony gtest/googletest/googlemock/all
+build _deps/googletest-build/all: phony _deps/googletest-build/googlemock/all
 
 # =============================================================================
 
 #############################################
-# Folder: /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googlemock
+# Folder: /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googlemock
 
-build gtest/googletest/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a gtest/googletest/googletest/all
-
-# =============================================================================
-
-#############################################
-# Folder: /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/gtest/googletest/googletest
-
-build gtest/googletest/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
+build _deps/googletest-build/googlemock/all: phony lib/libgmock.a lib/libgmock_main.a _deps/googletest-build/googletest/all
 
 # =============================================================================
 
 #############################################
-# Folder: /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/src
+# Folder: /Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-release-gcc/_deps/googletest-build/googletest
 
-build src/all: phony src/Src src/GTest
+build _deps/googletest-build/googletest/all: phony lib/libgtest.a lib/libgtest_main.a
 
 # =============================================================================
 # Built-in targets
@@ -801,14 +586,14 @@ build src/all: phony src/Src src/GTest
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPython3.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/CMakeLists.txt /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/CMakeLists.txt /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/CMakeLists.txt /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock/CMakeLists.txt /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock/cmake/gmock.pc.in /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock/cmake/gmock_main.pc.in /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/CMakeLists.txt /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/cmake/Config.cmake.in /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/cmake/gtest.pc.in /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/cmake/gtest_main.pc.in /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/cmake/internal_utils.cmake /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/src/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FetchContent.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FetchContent/CMakeLists.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPython.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/GoogleTest.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPython3.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/CMakeLists.txt /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/CMakeLists.txt /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/CMakeLists.txt /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock/CMakeLists.txt /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock/cmake/gmock.pc.in /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googlemock/cmake/gmock_main.pc.in /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/CMakeLists.txt /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/cmake/Config.cmake.in /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/cmake/gtest.pc.in /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/cmake/gtest_main.pc.in /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/gtest/googletest/googletest/cmake/internal_utils.cmake /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/src/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
+build /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/BasicConfigVersion-AnyNewerVersion.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeDependentOption.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckIncludeFile.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/CheckLibraryExists.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FetchContent.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FetchContent/CMakeLists.cmake.in /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPackageMessage.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPython.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindPython/Support.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/FindThreads.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/GNUInstallDirs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/GoogleTest.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Apple-GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/Platform/UnixPaths.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake /Volumes/T7/Software$ Files/Git$ Projects/Ps_Group11_Assignment1/CMakeLists.txt CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake _deps/googletest-src/CMakeLists.txt _deps/googletest-src/googlemock/CMakeLists.txt _deps/googletest-src/googlemock/cmake/gmock.pc.in _deps/googletest-src/googlemock/cmake/gmock_main.pc.in _deps/googletest-src/googletest/CMakeLists.txt _deps/googletest-src/googletest/cmake/Config.cmake.in _deps/googletest-src/googletest/cmake/gtest.pc.in _deps/googletest-src/googletest/cmake/gtest_main.pc.in _deps/googletest-src/googletest/cmake/internal_utils.cmake: phony
 
 
 #############################################

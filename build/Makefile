@@ -57,10 +57,10 @@ RM = /opt/homebrew/Cellar/cmake/3.27.7/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1"
+CMAKE_SOURCE_DIR = "/Volumes/T7/Software Files/Git Projects/PS_Group11_Assignment1"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/build"
+CMAKE_BINARY_DIR = "/Volumes/T7/Software Files/Git Projects/PS_Group11_Assignment1/build"
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -97,7 +97,7 @@ rebuild_cache/fast: rebuild_cache
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"gmock\" \"gtest\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Available install components are: \"Unspecified\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -142,9 +142,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/build/CMakeFiles" "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/build//CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Volumes/T7/Software Files/Git Projects/PS_Group11_Assignment1/build/CMakeFiles" "/Volumes/T7/Software Files/Git Projects/PS_Group11_Assignment1/build//CMakeFiles/progress.marks"
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/build/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/Volumes/T7/Software Files/Git Projects/PS_Group11_Assignment1/build/CMakeFiles" 0
 .PHONY : all
 
 # The main clean target
@@ -172,19 +172,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Src
-
-# Build rule for target.
-Src: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Src
-.PHONY : Src
-
-# fast build rule for target.
-Src/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/Src.dir/build.make src/CMakeFiles/Src.dir/build
-.PHONY : Src/fast
-
-#=============================================================================
 # Target rules for targets named GTest
 
 # Build rule for target.
@@ -194,7 +181,7 @@ GTest: cmake_check_build_system
 
 # fast build rule for target.
 GTest/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/GTest.dir/build.make src/CMakeFiles/GTest.dir/build
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GTest.dir/build.make CMakeFiles/GTest.dir/build
 .PHONY : GTest/fast
 
 #=============================================================================
@@ -207,7 +194,7 @@ gmock: cmake_check_build_system
 
 # fast build rule for target.
 gmock/fast:
-	$(MAKE) $(MAKESILENT) -f gtest/googletest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googletest/googlemock/CMakeFiles/gmock.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock.dir/build
 .PHONY : gmock/fast
 
 #=============================================================================
@@ -220,7 +207,7 @@ gmock_main: cmake_check_build_system
 
 # fast build rule for target.
 gmock_main/fast:
-	$(MAKE) $(MAKESILENT) -f gtest/googletest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googletest/googlemock/CMakeFiles/gmock_main.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build.make _deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/build
 .PHONY : gmock_main/fast
 
 #=============================================================================
@@ -233,7 +220,7 @@ gtest: cmake_check_build_system
 
 # fast build rule for target.
 gtest/fast:
-	$(MAKE) $(MAKESILENT) -f gtest/googletest/googletest/CMakeFiles/gtest.dir/build.make gtest/googletest/googletest/CMakeFiles/gtest.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest.dir/build
 .PHONY : gtest/fast
 
 #=============================================================================
@@ -246,8 +233,32 @@ gtest_main: cmake_check_build_system
 
 # fast build rule for target.
 gtest_main/fast:
-	$(MAKE) $(MAKESILENT) -f gtest/googletest/googletest/CMakeFiles/gtest_main.dir/build.make gtest/googletest/googletest/CMakeFiles/gtest_main.dir/build
+	$(MAKE) $(MAKESILENT) -f _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build.make _deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/build
 .PHONY : gtest_main/fast
+
+test.o: test.cpp.o
+.PHONY : test.o
+
+# target to build an object file
+test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GTest.dir/build.make CMakeFiles/GTest.dir/test.cpp.o
+.PHONY : test.cpp.o
+
+test.i: test.cpp.i
+.PHONY : test.i
+
+# target to preprocess a source file
+test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GTest.dir/build.make CMakeFiles/GTest.dir/test.cpp.i
+.PHONY : test.cpp.i
+
+test.s: test.cpp.s
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GTest.dir/build.make CMakeFiles/GTest.dir/test.cpp.s
+.PHONY : test.cpp.s
 
 # Help Target
 help:
@@ -263,11 +274,13 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... GTest"
-	@echo "... Src"
 	@echo "... gmock"
 	@echo "... gmock_main"
 	@echo "... gtest"
 	@echo "... gtest_main"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 

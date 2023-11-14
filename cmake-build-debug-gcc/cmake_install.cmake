@@ -39,12 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-debug-gcc/src/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-debug-gcc/gtest/cmake_install.cmake")
+  include("/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-debug-gcc/_deps/googletest-build/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
