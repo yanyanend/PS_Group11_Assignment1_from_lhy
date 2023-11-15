@@ -1,5 +1,0 @@
-if(EXISTS "/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-debug-gcc/GTest[1]_tests.cmake")
-  include("/Volumes/T7/Software Files/Git Projects/Ps_Group11_Assignment1/cmake-build-debug-gcc/GTest[1]_tests.cmake")
-else()
-  add_test(GTest_NOT_BUILT GTest_NOT_BUILT)
-endif()
